@@ -1,0 +1,5 @@
+Segmento,Ordem,Descricao,AcaoRecomendada
+Champions,1,"Compram com frequencia, recentemente e gastam muito","Programa de fidelidade, acesso antecipado, upsell"
+Novos Clientes,4,"Compraram recentemente, poucas vezes",Onboarding e incentivo a segunda compra
+Em Risco,5,"Ja compraram bastante, mas estao sumindo",Campanha de reativacao antes de perder o cliente
+Hibernando,6,"Pouca compra, ha muito tempo",Reativacao de baixo custo ou aceitar a perda
