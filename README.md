@@ -136,7 +136,7 @@ python notebooks/customer_segmentation_analysis.py
 - Exclusao de transacoes canceladas (InvoiceNo com prefixo 'C')
 - Capping de outliers por percentil (1%-99%)
 - Criacao de TotalPrice = Quantity x UnitPrice
-- Resultado: 541.909 -> 392.673 transacoes (72.5% retidos)
+- Resultado: 541.909 -> 392.688 transacoes (72.5% retidos)
 
 ### 2. Features RFM
 
@@ -163,8 +163,8 @@ Tambem calculadas: Tenure, ProductDiversity, AvgOrderValue.
 
 | Algoritmo | Silhouette | Davies-Bouldin | Calinski-Harabasz |
 |-----------|------------|----------------|-------------------|
-| KMeans | 0.337 | 1.01 | 3389.5 |
-| Hierarchical (Ward) | 0.321 | 1.08 | 3175.2 |
+| KMeans | 0.338 | 1.01 | 3390.2 |
+| Hierarchical (Ward) | 0.288 | 1.06 | 2927.1 |
 | DBSCAN | - | - | - |
 
 KMeans selecionado, otimizado com Optuna (50 trials).
@@ -181,10 +181,10 @@ KMeans selecionado, otimizado com Optuna (50 trials).
 
 | Segmento | Clientes | % Receita | Recency | Frequencia | Valor medio |
 |----------|----------|-----------|---------|------------|-------------|
-| Champions | 728 (16.8%) | 63.6% | 12 dias | 13.6x | $6.679 |
-| Novos Clientes | 848 (19.5%) | 5.6% | 19 dias | 2.1x | $506 |
-| Em Risco | 1.193 (27.5%) | 24.2% | 70 dias | 4.0x | $1.547 |
-| Hibernando | 1.569 (36.2%) | 6.6% | 186 dias | 1.3x | $321 |
+| Champions | 728 (16.8%) | 63.6% | 12 dias | 13.6x | $6.684 |
+| Novos Clientes | 846 (19.5%) | 5.6% | 19 dias | 2.1x | $508 |
+| Em Risco | 1.193 (27.5%) | 24.2% | 70 dias | 4.0x | $1.548 |
+| Hibernando | 1.571 (36.2%) | 6.6% | 186 dias | 1.3x | $321 |
 
 16.8% dos clientes (Champions) geram 63.6% da receita total.
 
@@ -194,7 +194,7 @@ KMeans selecionado, otimizado com Optuna (50 trials).
 |---------|-------|--------|
 | Silhouette Score | 0.337 | Moderado (tipico para e-commerce) |
 | Davies-Bouldin Index | 1.01 | Proximo do alvo (<1.0) |
-| Calinski-Harabasz | 3389.5 | Alto |
+| Calinski-Harabasz | 3390.6 | Alto |
 | Estabilidade (ARI) | 0.995 | Excelente |
 
 ### Recomendacoes
